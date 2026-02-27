@@ -1,0 +1,240 @@
+---
+title: "Installation"
+description: "Get Signal OS Social running from scratch — no coding experience required."
+---
+
+Signal OS runs inside an AI coding agent on your computer. Pick the path that matches the agent you use.
+
+<CardGroup cols={2}>
+  <Card title="Path A — VS Code + Claude Code" icon="code" href="#path-a-vs-code-and-claude-code">
+    Powered by Anthropic's Claude. Commands use `/skill-name` syntax.
+  </Card>
+  <Card title="Path B — Codex" icon="openai" href="#path-b-codex">
+    Powered by OpenAI. Commands use `$skill-name` syntax.
+  </Card>
+</CardGroup>
+
+Both paths read the same files and run the same system. The only difference is the command prefix.
+
+<Note>
+  While Claude Code requires a paid subscription, Codex is available to ChatGPT Free and Go users for a limited time.
+</Note>
+
+---
+
+## Before You Start
+
+You need a GitHub account to fork the repo and keep your own private copy.
+
+<Steps>
+  <Step title="Create a GitHub account">
+    Go to [github.com](https://github.com) and create a free account if you don't have one.
+  </Step>
+  <Step title="Fork the Signal OS repo">
+    Come back to the Signal OS repo and click **Fork** in the top right corner, then click **Create fork**.
+
+    This creates your own copy of Signal OS under your GitHub account. Your content, your `NORTHSTAR.md`, everything stays private in your fork.
+  </Step>
+</Steps>
+
+<Note>
+  You'll be working from your fork from this point on. Keep the URL handy — it will look like `https://github.com/YOUR-USERNAME/signal-os-social`.
+</Note>
+
+---
+
+## Path A: VS Code and Claude Code
+
+### What you need
+
+<CardGroup cols={2}>
+  <Card title="VS Code" icon="window" href="https://code.visualstudio.com/">
+    Free code editor where you run Signal OS.
+  </Card>
+  <Card title="Claude Code" icon="robot" href="https://claude.ai">
+    VS Code extension that powers the skills. Requires a Claude subscription (Pro or above).
+  </Card>
+  <Card title="Obsidian" icon="notebook" href="https://obsidian.md/">
+    Free writing app where your articles live. Signal OS creates files here automatically.
+  </Card>
+  <Card title="Git" icon="code-branch" href="https://git-scm.com/">
+    Free tool that downloads repo files to your computer.
+  </Card>
+</CardGroup>
+
+---
+
+### Setup steps
+
+<Steps>
+  <Step title="Install Git">
+    Git is the tool that downloads files from GitHub to your computer.
+
+    <Tabs>
+      <Tab title="Mac">
+        1. Open **Terminal** (search "Terminal" in Spotlight)
+        2. Type `git --version` and press Enter
+        3. If Git is not installed, macOS will prompt you — click **Install** and follow the steps
+      </Tab>
+      <Tab title="Windows">
+        1. Go to [git-scm.com/download/win](https://git-scm.com/download/win)
+        2. Download and run the installer
+        3. Accept all default settings
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Install VS Code">
+    1. Go to [code.visualstudio.com](https://code.visualstudio.com/)
+    2. Click the download button for your operating system
+    3. Open the downloaded file and follow the installation steps
+    4. Open VS Code once installed
+  </Step>
+
+  <Step title="Install the Claude Code extension">
+    1. In VS Code, click the **Extensions** icon in the left sidebar (four squares icon)
+    2. In the search bar, type `Claude Code`
+    3. Click **Install** on the Claude Code extension by Anthropic
+    4. Once installed, a Claude icon will appear in the left sidebar
+  </Step>
+
+  <Step title="Sign in to Claude Code">
+    1. Click the Claude icon in the VS Code sidebar
+    2. Click **Sign in** and follow the prompts to connect your Claude account
+    3. You need an active Claude subscription (Pro or above) — sign up at [claude.ai](https://claude.ai) if you don't have one
+  </Step>
+
+  <Step title="Clone your fork">
+    This downloads your copy of Signal OS to your computer.
+
+    1. In VS Code, press `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac) to open the command palette
+    2. Type `Git: Clone` and press Enter
+    3. Paste the URL of your fork: `https://github.com/YOUR-USERNAME/signal-os-social`
+    4. Choose a folder to save it — your Desktop or Documents works fine
+    5. When VS Code asks "Would you like to open the cloned repository?", click **Open**
+
+    You are now inside your Signal OS folder.
+  </Step>
+
+  <Step title="Install Obsidian">
+    1. Go to [obsidian.md](https://obsidian.md/) and download the app
+    2. Open Obsidian
+    3. On the welcome screen, click **Open folder as vault**
+    4. Navigate to the `signal-os-social` folder you just cloned and click Open
+
+    Your Signal OS folder structure will appear in the Obsidian sidebar. You don't need to do anything else here right now.
+  </Step>
+
+  <Step title="Run your first skill">
+    1. Go back to VS Code — the Claude Code panel should be visible on the left
+    2. Click on it to open the chat
+    3. Type `/social-mission` and press Enter
+
+    This starts the brand positioning interview. It asks you questions one at a time and writes your `NORTHSTAR.md` when you're done. Every other skill reads this file — it's the foundation of the whole system.
+
+    <Tip>
+      If you ever get lost, type `/social-guide` to see exactly where you are and what to do next.
+    </Tip>
+  </Step>
+</Steps>
+
+---
+
+## Path B: Codex
+
+### What you need
+
+<CardGroup cols={2}>
+  <Card title="OpenAI account" icon="openai" href="https://openai.com">
+    Required to access Codex. Free account — Codex access may require a subscription.
+  </Card>
+  <Card title="GitHub account" icon="github" href="https://github.com">
+    Already set up in the Before You Start section above.
+  </Card>
+</CardGroup>
+
+---
+
+### Setup steps
+
+<Steps>
+  <Step title="Confirm your fork is ready">
+    Make sure you completed the **Before You Start** section above. Your fork should be live at `https://github.com/YOUR-USERNAME/signal-os-social`.
+  </Step>
+
+  <Step title="Open Codex">
+    1. Go to [openai.com/codex](https://openai.com/codex) and sign in with your OpenAI account
+    2. If prompted, connect your GitHub account so Codex can access your repositories
+  </Step>
+
+  <Step title="Open your Signal OS fork">
+    1. In Codex, look for the option to open or connect a repository
+    2. Select your fork: `YOUR-USERNAME/signal-os-social`
+    3. Codex will read the `AGENTS.md` file at the root of the repo — this tells it how Signal OS works
+  </Step>
+
+  <Step title="Run your first skill">
+    In the Codex chat, type:
+
+    ```
+    $social-mission
+    ```
+
+    This starts the brand positioning interview — same as Claude Code, just using `$` instead of `/`.
+
+    <Tip>
+      If you ever get lost, type `$social-guide` to see where you are and what to do next.
+    </Tip>
+  </Step>
+</Steps>
+
+---
+
+## What happens after setup
+
+Once your `NORTHSTAR.md` is filled in, you have two paths for creating content:
+
+<CardGroup cols={2}>
+  <Card title="Authority content" icon="link-chain">
+    You did something onchain — document it.
+
+    ```
+    /social-doc → /social-result → /social-reflect
+    ```
+  </Card>
+  <Card title="Growth content" icon="chart-line">
+    You have a take or a story to tell.
+
+    ```
+    /social-idea → /social-outline → [write in Obsidian]
+    → /social-review → /social-cta
+    → /social-publish → /social-tweets
+    ```
+  </Card>
+</CardGroup>
+
+<Note>
+  Not sure which to start with? Run `/social-guide` (or `$social-guide` on Codex) — it scans your folders and tells you exactly what to do next.
+</Note>
+
+---
+
+## Optional: Connect Typefully
+
+[Typefully](https://typefully.com/?via=fipcrypto) lets you schedule tweets, CTAs, and cross-posts to X, Threads, BlueSky, and LinkedIn from one place.
+
+Once you have a [Typefully](https://typefully.com/?via=fipcrypto) account, run:
+
+```
+/typefully-api-install
+```
+
+It will walk you through connecting your account step by step.
+
+<Note>
+  On Codex, use `$typefully-api-install` instead.
+</Note>
+
+<Card title="Skills reference" icon="list" href="/signal-os/skills">
+  Browse all Signal OS skills, their invocation syntax for Claude Code and Codex, and how they fit into each content workflow.
+</Card>

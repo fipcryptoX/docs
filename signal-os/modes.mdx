@@ -1,0 +1,170 @@
+---
+title: "Learn, Practice, Create"
+description: "How to use the three modes to build skill before you publish."
+---
+
+Signal OS has three modes that guide you from understanding a framework all the way through to executing it. You access all three through a single skill:
+
+<Tabs>
+  <Tab title="Claude Code">
+    ```
+    /social-mode
+    ```
+  </Tab>
+  <Tab title="Codex">
+    ```
+    $social-mode
+    ```
+  </Tab>
+</Tabs>
+
+When you run it, you'll be asked to pick a module and then choose your mode: **Learn**, **Practice**, or **Create**.
+
+<Note>
+  The order matters. Learn the framework first, practice applying it to your specific content, then use Create to execute. Jumping straight to Create without the context usually produces weaker output.
+</Note>
+
+---
+
+## The ten modules
+
+Each module maps to a core framework and one or more skills:
+
+| # | Module | Framework | Skill(s) |
+|---|---|---|---|
+| 0 | The Long Game | SURFACE | `/social-guide` |
+| 1 | Brand Positioning | NORTHSTAR | `/social-mission` |
+| 2 | Documentation | DDRR — Document step | `/social-doc` |
+| 3 | Founder Story | 3-Arc Story | `/social-founder` |
+| 4 | Profile Audit | Landing page approach | `/social-profile` |
+| 5 | The Authority Loop | DDRR — Result + Reflect | `/social-result`, `/social-reflect` |
+| 6 | The Reply Game | REACT | `/social-reply` |
+| 7 | Growth Content | CSPR + Article Frameworks | `/social-idea`, `/social-outline` |
+| 8 | Quality | URRRCS checklist | `/social-review` |
+| 9 | Amplify | Idea Amplifier + Koemmandments | `/social-tweets`, `/social-cta`, `/social-publish` |
+| 10 | Compound | The long game in practice | `/social-guide`, `/social-archive` |
+
+---
+
+## Learn
+
+**Purpose:** Understand a framework deeply before you try to apply it.
+
+The agent teaches you the selected framework — not in the abstract, but tied to your niche from `NORTHSTAR.md`. Every example is personalised to your content category.
+
+**What you get in a Learn session:**
+- Why this framework exists — what problem it solves
+- How it works, step by step
+- What good looks like versus what's weak
+- How it connects to other frameworks in the system
+
+**When to use it:**
+- Before running a skill for the first time
+- When your output from a skill feels off and you're not sure why
+- When you want to understand the reasoning behind a step, not just follow it
+
+---
+
+## Practice
+
+**Purpose:** Apply the framework to your own content with guided thinking — before you execute.
+
+The agent asks you questions one at a time and gives you specific feedback on each answer. It scores your thinking against the relevant framework (URRRCS for posts, Triple-R for ideas, REACT for replies) and tells you what's clear, what's vague, and what needs more depth.
+
+**What you get in a Practice session:**
+- Honest, specific feedback on your draft thinking
+- A score against the relevant framework
+- Questions that help you find better answers yourself
+- A "ready to execute?" prompt when your thinking is solid
+
+**What the agent will not do:**
+- Rewrite your content for you
+- Offer three ready-to-use options to pick from
+- Move to the next question before you've answered the current one
+
+<Tip>
+  Practice is most valuable before outlining an article or before writing your first doc tweet. Getting your thinking sharp before you write saves a lot of revision time.
+</Tip>
+
+---
+
+## Create
+
+**Purpose:** Execute with the right Signal OS skill for the module you chose.
+
+Create mode maps your selected module to its corresponding skill and runs the full workflow from that skill's instructions. The agent guides you through each step one at a time, and all output is saved to your filesystem with the correct file naming and frontmatter.
+
+**Module to skill mapping:**
+
+<AccordionGroup>
+  <Accordion title="Module 0: The Long Game">
+    Runs `/social-guide` — scans your repo and tells you where you are in the creator journey and what to do next.
+  </Accordion>
+  <Accordion title="Module 1: Brand Positioning">
+    Runs `/social-mission` — the full brand positioning interview. Populates your `NORTHSTAR.md`.
+  </Accordion>
+  <Accordion title="Module 2: Documentation">
+    Runs `/social-doc` — documents an onchain action as a tweet (What / Why / How format).
+  </Accordion>
+  <Accordion title="Module 3: Founder Story">
+    Runs `/social-founder` — 7-question interview that produces your founder story outline using the 3-arc structure.
+  </Accordion>
+  <Accordion title="Module 4: Profile Audit">
+    Runs `/social-profile` — audits your X profile across 6 elements and produces a profile brief.
+  </Accordion>
+  <Accordion title="Module 5: The Authority Loop">
+    Runs `/social-result` then `/social-reflect` — records the outcome of a documented action and extracts the deeper insight.
+  </Accordion>
+  <Accordion title="Module 6: The Reply Game">
+    Runs `/social-reply` — guides you through the REACT framework to craft a high-signal reply to a specific tweet.
+  </Accordion>
+  <Accordion title="Module 7: Growth Content">
+    Runs `/social-idea` then `/social-outline` — captures an idea, filters it against Triple-R, and structures it into an article outline.
+  </Accordion>
+  <Accordion title="Module 8: Quality">
+    Runs `/social-review` — scores a draft article against the URRRCS framework and gives targeted feedback.
+  </Accordion>
+  <Accordion title="Module 9: Amplify">
+    Runs `/social-cta`, `/social-publish`, or `/social-tweets` depending on where you are in the publishing flow.
+  </Accordion>
+  <Accordion title="Module 10: Compound">
+    Runs `/social-archive` or `/social-guide` — moves a completed piece to archive and updates the content index.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## The frameworks behind each mode
+
+Each mode applies a specific framework to evaluate your work. Here's what the three key ones look for:
+
+<AccordionGroup>
+  <Accordion title="URRRCS — Quality checklist (used in Practice and Review)">
+    | Letter | Dimension | Question |
+    |---|---|---|
+    | **U** | Unique | Does this say something only you could write? |
+    | **R** | Readable | Can someone skim in 7 seconds and get value? |
+    | **R** | Relatable | Does the reader feel seen? |
+    | **R** | Replicable | Can the reader apply this? |
+    | **C** | Credible | Do you have standing to make this claim? |
+    | **S** | Sticky | Is there a phrase they'll remember? |
+  </Accordion>
+  <Accordion title="Triple-R — Idea filter (used before outlining)">
+    Before committing to an article, an idea is filtered against three questions:
+
+    - **Reach** — Does this topic reach your target audience?
+    - **Relevance** — Is this relevant to your mission and positioning?
+    - **Resonance** — Will this land emotionally, not just intellectually?
+
+    An idea that scores weakly on all three should be parked.
+  </Accordion>
+  <Accordion title="REACT — Reply framework (used in Practice and /social-reply)">
+    | Letter | Stage | What it means |
+    |---|---|---|
+    | **R** | Recognise | Pick the right account tier to reply to |
+    | **E** | Engage | Only reply when you have a real thought to add |
+    | **A** | Add signal | Personal experience, sharp observation, nuance, or example |
+    | **C** | Consistently show up | Bridge trust through repeated authentic engagement |
+    | **T** | Track | Save strong replies and watch what performs |
+  </Accordion>
+</AccordionGroup>

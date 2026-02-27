@@ -1,0 +1,161 @@
+---
+title: "Overview"
+description: "What Signal OS is, how it works, and where to start."
+---
+
+Signal OS is a content creation system for crypto creators. It runs inside an AI coding agent and gives you a set of skills — commands that guide you through every stage of building a reputation onchain.
+
+The core idea: **AI can make commodity content. The only defensible positioning is an audience that actively seeks you out.** Signal OS helps you build that by documenting real work, extracting real insight, and publishing it consistently.
+
+---
+
+## The SURFACE framework
+
+Everything in Signal OS flows from one philosophy:
+
+| Letter | Stage | What it means |
+|---|---|---|
+| **S** | Show up | Do cool things onchain. Your content is authentic because you've actually done it. |
+| **U** | Unpack | Document what you did and reflect on the results. |
+| **R** | Return value | Write to solve someone's problem. Speak to your former self. |
+| **F** | Filter | Clarity compounds. Consistent writing sharpens your thinking over time. |
+| **A** | Anchor | Own one category. Dominate before you expand. |
+| **C** | Capture | Let the work accumulate. Every piece lays foundation for the next. |
+| **E** | Earn | Reputation first. Monetise too early and you lose trust. |
+
+---
+
+## Two content pipelines
+
+Signal OS runs two parallel pipelines. Most creators run both at the same time.
+
+<CardGroup cols={2}>
+  <Card title="Authority pipeline" icon="link-chain">
+    **For:** Something you actually did onchain.
+
+    You document it, record the result, then reflect on what it meant.
+
+    ```
+    /social-doc
+    /social-result
+    /social-reflect
+    ```
+  </Card>
+  <Card title="Growth pipeline" icon="chart-line">
+    **For:** A take, a framework, or a story you want to develop.
+
+    You capture the idea, outline it, write in Obsidian, then publish.
+
+    ```
+    /social-idea → /social-outline
+    → [write] → /social-review
+    → /social-cta → /social-publish
+    → /social-tweets
+    ```
+  </Card>
+</CardGroup>
+
+<Note>
+  Not sure which pipeline fits your content? Run `/social-guide` — it scans your folders and tells you exactly where you are and what to do next.
+</Note>
+
+---
+
+## Your creator journey
+
+Signal OS detects where you are based on what files exist in your repo. There are four phases:
+
+<Steps>
+  <Step title="Phase 1 — Clarity">
+    **Condition:** `NORTHSTAR.md` is empty.
+
+    **What to do:** Run `/social-mission`. This is a brand positioning interview — it asks you questions one at a time and fills in your `NORTHSTAR.md` when you're done.
+
+    Every other skill reads this file. It's the foundation of the whole system.
+  </Step>
+
+  <Step title="Phase 2 — First wins">
+    **Condition:** `NORTHSTAR.md` is set, but you have no authority content or no founder story yet.
+
+    **What to do:**
+    - `/social-doc` — Your first documentation tweet. Proves you're active.
+    - `/social-founder` — Your origin story. The most important article you'll write.
+  </Step>
+
+  <Step title="Phase 3 — Authority rhythm">
+    **Condition:** At least one authority folder with doc files exists.
+
+    **What to do:** Run the authority loop continuously. Every time you do something onchain:
+    1. Document it with `/social-doc`
+    2. Record what happened with `/social-result`
+    3. Extract the insight with `/social-reflect`
+    4. Archive it when done with `/social-archive`
+  </Step>
+
+  <Step title="Phase 4 — Growth engine">
+    **Condition:** Growth content exists beyond your founder story.
+
+    **What to do:** Phases 3 and 4 run simultaneously. The ideal weekly rhythm is one authority cycle and one growth article.
+
+    | Day | Action |
+    |---|---|
+    | Sunday | Pre-article CTA + pin |
+    | Monday | Publish article |
+    | Tuesday | Post-article CTA + new pin |
+    | Daily | At least 10 replies |
+    | Ongoing | Standalone tweets via skills |
+  </Step>
+</Steps>
+
+---
+
+## How your files are organised
+
+Signal OS writes files to two folders inside your repo:
+
+<AccordionGroup>
+  <Accordion title="content/authority/[Idea_Name]/">
+    One folder per onchain action. Files are named by date and stage:
+
+    ```
+    content/authority/Uniswap_LP_Position/
+    ├── 20260228_doc_uniswap_lp_position.md
+    ├── 20260301_result_uniswap_lp_position.md
+    ├── 20260305_reflect_idea_uniswap_lp_position.md
+    └── 20260305_reflect_outline_uniswap_lp_position.md
+    ```
+  </Accordion>
+  <Accordion title="content/growth/[Idea_Name]/">
+    One folder per article. The article file itself has no stage prefix — all other stage files do:
+
+    ```
+    content/growth/Why_Protocol_X_Failed/
+    ├── 20260215_idea_why_protocol_x_failed.md
+    ├── 20260215_outline_why_protocol_x_failed.md
+    ├── 20260220_why_protocol_x_failed.md        ← the article
+    ├── 20260220_review_why_protocol_x_failed.md
+    ├── 20260225_cta_why_protocol_x_failed.md
+    ├── 20260227_publish_why_protocol_x_failed.md
+    └── 20260227_tweet_why_protocol_x_failed.md
+    ```
+  </Accordion>
+  <Accordion title="archive/">
+    When a piece is fully published, the whole folder moves here via `/social-archive`. Nothing gets renamed. The `archive/content_index.md` file tracks everything you've ever published.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Where to go next
+
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/signal-os/installation">
+    Set up Signal OS on VS Code or Codex.
+  </Card>
+  <Card title="Learn, Practice, Create" icon="graduation-cap" href="/signal-os/modes">
+    How to use the three modes to build skill before you create.
+  </Card>
+  <Card title="Skills reference" icon="list" href="/signal-os/skills">
+    Every skill, what it does, and where it fits in each pipeline.
+  </Card>
+</CardGroup>
