@@ -1,97 +1,47 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Signal OS"
+description: "A content system for crypto creators. Build reputation through documented work, not viral luck."
 ---
 
-## Setting up
+Signal OS runs inside an AI coding agent and gives you a set of skills that guide you through every stage of building an audience onchain — from brand positioning, to publishing, to scheduling.
 
-Get your documentation site up and running in minutes.
-
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
-
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="Get started" icon="rocket" href="/signal-os/overview">
+    Understand the system, the two pipelines, and where you are in the creator journey.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Installation" icon="download" href="/signal-os/installation">
+    Set up Signal OS on VS Code + Claude Code or Codex. No coding experience required.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Learn, Practice, Create" icon="graduation-cap" href="/signal-os/modes">
+    Use the three modes to build skill with each framework before you publish.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Skills reference" icon="list" href="/signal-os/skills">
+    Every skill, what it does, and where it fits in each content pipeline.
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+---
 
-Everything you need to create world-class documentation.
+## The two pipelines
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+<CardGroup cols={2}>
+  <Card title="Authority pipeline" icon="link-chain">
+    For when you did something onchain and want to document it.
 
-## Need inspiration?
+    ```
+    /social-doc → /social-result → /social-reflect
+    ```
+  </Card>
+  <Card title="Growth pipeline" icon="chart-line">
+    For when you have a take, a framework, or a story to develop.
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+    ```
+    /social-idea → /social-outline → /social-review
+    → /social-cta → /social-publish → /social-tweets
+    ```
+  </Card>
+</CardGroup>
+
+<Note>
+  Not sure where to start? Run `/social-guide` inside your agent — it scans your repo and tells you exactly what to do next.
+</Note>
