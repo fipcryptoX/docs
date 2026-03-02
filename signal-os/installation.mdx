@@ -107,14 +107,18 @@ Both paths read the same files and run the same system. The only difference is t
 
 ## Path B: Codex
 
+<Warning>
+  The Codex app is currently **Mac only**. If you're on Windows, use Path A (VS Code + Claude Code) instead.
+</Warning>
+
 ### What you need
 
 <CardGroup cols={2}>
-  <Card title="OpenAI account" icon="openai" href="https://openai.com">
-    Required to access Codex. Available free to ChatGPT Free and Go users for a limited time.
+  <Card title="Codex app" icon="openai" href="https://openai.com/codex">
+    The Mac desktop app. Available free to ChatGPT Free and Go users for a limited time.
   </Card>
-  <Card title="GitHub account" icon="github" href="https://github.com">
-    Required so Codex can access your copy of Signal OS.
+  <Card title="Obsidian" icon="notebook" href="https://obsidian.md/">
+    Free writing app where your articles live. Signal OS creates files here automatically.
   </Card>
 </CardGroup>
 
@@ -123,25 +127,30 @@ Both paths read the same files and run the same system. The only difference is t
 ### Setup steps
 
 <Steps>
-  <Step title="Create a GitHub account">
-    Go to [github.com](https://github.com) and create a free account if you don't have one.
+  <Step title="Download and unzip Signal OS">
+    [Download the Signal OS Social folder here.](#)
+
+    Once downloaded, unzip the file — you'll get a folder called `signal-os-social`. Move it anywhere you like (Desktop or Downloads works fine).
   </Step>
 
-  <Step title="Fork the Signal OS repo">
-    Go to the Signal OS repo and click **Fork** in the top right corner, then click **Create fork**.
-
-    This creates your own private copy under your GitHub account. Your content and `NORTHSTAR.md` stay in your fork.
-  </Step>
-
-  <Step title="Open Codex">
+  <Step title="Download the Codex app">
     1. Go to [openai.com/codex](https://openai.com/codex) and sign in with your OpenAI account
-    2. If prompted, connect your GitHub account so Codex can access your repositories
+    2. Download and install the Mac desktop app
   </Step>
 
-  <Step title="Open your Signal OS fork">
-    1. In Codex, look for the option to open or connect a repository
-    2. Select your fork: `YOUR-USERNAME/signal-os-social`
-    3. Codex will read the `AGENTS.md` file at the root of the repo — this tells it how Signal OS works
+  <Step title="Open Signal OS in Codex">
+    1. In Codex, click **Add new project**
+    2. Navigate to the `signal-os-social` folder you just unzipped and select it
+    3. Click **Open** — Codex will read the `AGENTS.md` file at the root of the folder, which tells it how Signal OS works
+  </Step>
+
+  <Step title="Install Obsidian">
+    1. Go to [obsidian.md](https://obsidian.md/) and download the app
+    2. Open Obsidian
+    3. On the welcome screen, click **Open folder as vault**
+    4. Navigate to the same `signal-os-social` folder and click Open
+
+    This is where you'll read and write your articles — much easier than working in raw markdown files.
   </Step>
 
   <Step title="Run your first skill">
@@ -151,7 +160,7 @@ Both paths read the same files and run the same system. The only difference is t
     $social-start
     ```
 
-    This is the system entry point — it loads Signal OS, checks the state of your repo, and tells you exactly what to do first.
+    This is the system entry point — it loads Signal OS, checks the state of your folder, and tells you exactly what to do first.
 
     <Tip>
       If you ever get lost, type `$social-help` to see where you are and what to do next.
