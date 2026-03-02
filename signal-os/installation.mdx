@@ -22,27 +22,6 @@ Both paths read the same files and run the same system. The only difference is t
 
 ---
 
-## Before You Start
-
-You need a GitHub account to fork the repo and keep your own private copy.
-
-<Steps>
-  <Step title="Create a GitHub account">
-    Go to [github.com](https://github.com) and create a free account if you don't have one.
-  </Step>
-  <Step title="Fork the Signal OS repo">
-    Come back to the Signal OS repo and click **Fork** in the top right corner, then click **Create fork**.
-
-    This creates your own copy of Signal OS under your GitHub account. Your content, your `NORTHSTAR.md`, everything stays private in your fork.
-  </Step>
-</Steps>
-
-<Note>
-  You'll be working from your fork from this point on. Keep the URL handy — it will look like `https://github.com/YOUR-USERNAME/signal-os-social`.
-</Note>
-
----
-
 ## Path A: VS Code and Claude Code
 
 ### What you need
@@ -57,9 +36,6 @@ You need a GitHub account to fork the repo and keep your own private copy.
   <Card title="Obsidian" icon="notebook" href="https://obsidian.md/">
     Free writing app where your articles live. Signal OS creates files here automatically.
   </Card>
-  <Card title="Git" icon="code-branch" href="https://git-scm.com/">
-    Free tool that downloads repo files to your computer.
-  </Card>
 </CardGroup>
 
 ---
@@ -67,21 +43,10 @@ You need a GitHub account to fork the repo and keep your own private copy.
 ### Setup steps
 
 <Steps>
-  <Step title="Install Git">
-    Git is the tool that downloads files from GitHub to your computer.
+  <Step title="Download and unzip Signal OS">
+    [Download the Signal OS Social folder here.](#)
 
-    <Tabs>
-      <Tab title="Mac">
-        1. Open **Terminal** (search "Terminal" in Spotlight)
-        2. Type `git --version` and press Enter
-        3. If Git is not installed, macOS will prompt you — click **Install** and follow the steps
-      </Tab>
-      <Tab title="Windows">
-        1. Go to [git-scm.com/download/win](https://git-scm.com/download/win)
-        2. Download and run the installer
-        3. Accept all default settings
-      </Tab>
-    </Tabs>
+    Once downloaded, unzip the file — you'll get a folder called `signal-os-social`. Move it anywhere you like (Desktop or Downloads works fine).
   </Step>
 
   <Step title="Install VS Code">
@@ -91,9 +56,17 @@ You need a GitHub account to fork the repo and keep your own private copy.
     4. Open VS Code once installed
   </Step>
 
+  <Step title="Open the Signal OS folder in VS Code">
+    1. In VS Code, click **File → Open Folder**
+    2. Navigate to the `signal-os-social` folder you just unzipped
+    3. Click **Open**
+
+    You are now inside your Signal OS folder.
+  </Step>
+
   <Step title="Install the Claude Code extension">
-    1. In VS Code, click the **Extensions** icon in the left sidebar (four squares icon)
-    2. In the search bar, type `Claude Code`
+    1. Click the **Extensions** icon in the left sidebar (four squares icon)
+    2. Search for `Claude Code`
     3. Click **Install** on the Claude Code extension by Anthropic
     4. Once installed, a Claude icon will appear in the left sidebar
   </Step>
@@ -102,38 +75,30 @@ You need a GitHub account to fork the repo and keep your own private copy.
     1. Click the Claude icon in the VS Code sidebar
     2. Click **Sign in** and follow the prompts to connect your Claude account
     3. You need an active Claude subscription (Pro or above) — sign up at [claude.ai](https://claude.ai) if you don't have one
-  </Step>
 
-  <Step title="Clone your fork">
-    This downloads your copy of Signal OS to your computer.
-
-    1. In VS Code, press `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac) to open the command palette
-    2. Type `Git: Clone` and press Enter
-    3. Paste the URL of your fork: `https://github.com/YOUR-USERNAME/signal-os-social`
-    4. Choose a folder to save it — your Desktop or Documents works fine
-    5. When VS Code asks "Would you like to open the cloned repository?", click **Open**
-
-    You are now inside your Signal OS folder.
+    <Tip>
+      Use **Haiku** as your model instead of Sonnet. It's faster, uses less of your rate limit, and handles Signal OS skills just as well for day-to-day use.
+    </Tip>
   </Step>
 
   <Step title="Install Obsidian">
     1. Go to [obsidian.md](https://obsidian.md/) and download the app
     2. Open Obsidian
     3. On the welcome screen, click **Open folder as vault**
-    4. Navigate to the `signal-os-social` folder you just cloned and click Open
+    4. Navigate to the same `signal-os-social` folder and click Open
 
-    Your Signal OS folder structure will appear in the Obsidian sidebar. You don't need to do anything else here right now.
+    Your Signal OS folder will appear in Obsidian's sidebar. This is where you'll read and write your articles — it's much easier to work in than raw markdown files.
   </Step>
 
   <Step title="Run your first skill">
     1. Go back to VS Code — the Claude Code panel should be visible on the left
     2. Click on it to open the chat
-    3. Type `/social-mission` and press Enter
+    3. Type `/social-start` and press Enter
 
-    This starts the brand positioning interview. It asks you questions one at a time and writes your `NORTHSTAR.md` when you're done. Every other skill reads this file — it's the foundation of the whole system.
+    This is the system entry point. It loads Signal OS, checks the state of your repo, and tells you exactly what to do first. If you're brand new, it will walk you through four quick wins to get you up and running.
 
     <Tip>
-      If you ever get lost, type `/social-guide` to see exactly where you are and what to do next.
+      If you ever get lost, type `/social-help` to see exactly where you are and what to do next.
     </Tip>
   </Step>
 </Steps>
@@ -146,10 +111,10 @@ You need a GitHub account to fork the repo and keep your own private copy.
 
 <CardGroup cols={2}>
   <Card title="OpenAI account" icon="openai" href="https://openai.com">
-    Required to access Codex. Free account — Codex access may require a subscription.
+    Required to access Codex. Available free to ChatGPT Free and Go users for a limited time.
   </Card>
   <Card title="GitHub account" icon="github" href="https://github.com">
-    Already set up in the Before You Start section above.
+    Required so Codex can access your copy of Signal OS.
   </Card>
 </CardGroup>
 
@@ -158,8 +123,14 @@ You need a GitHub account to fork the repo and keep your own private copy.
 ### Setup steps
 
 <Steps>
-  <Step title="Confirm your fork is ready">
-    Make sure you completed the **Before You Start** section above. Your fork should be live at `https://github.com/YOUR-USERNAME/signal-os-social`.
+  <Step title="Create a GitHub account">
+    Go to [github.com](https://github.com) and create a free account if you don't have one.
+  </Step>
+
+  <Step title="Fork the Signal OS repo">
+    Go to the Signal OS repo and click **Fork** in the top right corner, then click **Create fork**.
+
+    This creates your own private copy under your GitHub account. Your content and `NORTHSTAR.md` stay in your fork.
   </Step>
 
   <Step title="Open Codex">
@@ -177,13 +148,13 @@ You need a GitHub account to fork the repo and keep your own private copy.
     In the Codex chat, type:
 
     ```
-    $social-mission
+    $social-start
     ```
 
-    This starts the brand positioning interview — same as Claude Code, just using `$` instead of `/`.
+    This is the system entry point — it loads Signal OS, checks the state of your repo, and tells you exactly what to do first.
 
     <Tip>
-      If you ever get lost, type `$social-guide` to see where you are and what to do next.
+      If you ever get lost, type `$social-help` to see where you are and what to do next.
     </Tip>
   </Step>
 </Steps>
@@ -214,7 +185,7 @@ Once your `NORTHSTAR.md` is filled in, you have two paths for creating content:
 </CardGroup>
 
 <Note>
-  Not sure which to start with? Run `/social-guide` (or `$social-guide` on Codex) — it scans your folders and tells you exactly what to do next.
+  Not sure which to start with? Run `/social-help` (or `$social-help` on Codex) — it scans your folders and tells you exactly what to do next.
 </Note>
 
 ---

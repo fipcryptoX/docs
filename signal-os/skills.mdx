@@ -12,14 +12,14 @@ Skills are the commands that drive Signal OS. Each skill is a pre-built instruct
     Type the skill name with a `/` prefix in the Claude Code chat:
 
     ```
-    /social-mission
+    /social-start
     ```
   </Tab>
   <Tab title="Codex">
     Type the skill name with a `$` prefix in the Codex chat:
 
     ```
-    $social-mission
+    $social-start
     ```
   </Tab>
 </Tabs>
@@ -32,8 +32,10 @@ Both agents read the same skill files — the only difference is the prefix.
 
 | Skill | What it does |
 |---|---|
-| `/social-mission` | Brand positioning interview — **run this first**. Writes your `NORTHSTAR.md`, which every other skill reads. |
-| `/social-guide` | Scans your folders and tells you exactly where you are and what to do next. Run this any time you feel lost. |
+| `/social-start` | System entry point — **run this first**. Loads Signal OS, detects your state, and guides you through setup. |
+| `/social-mission` | Brand positioning interview. Writes your `NORTHSTAR.md`, which every other skill reads. |
+| `/social-import` | Import existing X posts into your archive. Generates a voice guideline that all drafting skills use. |
+| `/social-help` | Scans your folders, shows pipeline status, and tells you exactly what to do next. Run this any time you feel lost. |
 | `/social-mode` | Teaches you a content framework before you start creating. |
 
 ---
@@ -90,6 +92,7 @@ For when you have a take, a story, or an idea to develop.
 |---|---|
 | `/social-archive` | Archive published content to keep your workspace clean. |
 | `/typefully-api-install` | Connect [Typefully](https://typefully.com/?via=fipcrypto) for direct scheduling to X, Threads, BlueSky, and LinkedIn. |
+| `/typefully-schedule` | Schedule a piece of content to the next free slot in your [Typefully](https://typefully.com/?via=fipcrypto) queue. |
 
 <Tip>
   Replace `/` with `$` for all skills if you're using Codex.
